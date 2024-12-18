@@ -1,0 +1,28 @@
+<div class="section dashboard_bg">
+    <div>
+        <h1>Movie Dashboard</h1>
+        
+        <!-- Display genres dynamically -->
+        <div>
+          <h3>Genres</h3>
+          <ul>
+            <li *ngFor="let genre of genres">
+              <button (click)="showMovies(genre.id)">{{ genre.name }}</button>
+            </li>
+          </ul>
+        </div>
+      
+        <!-- Display movies for the selected genre -->
+        <div *ngIf="movies.length > 0">
+          <h3>Movies:</h3>
+          <ul>
+            <li *ngFor="let movie of movies">
+              <h4>{{ movie.title }}</h4>
+              <p>{{ movie.overview }}</p>
+              <img [src]="'https://image.tmdb.org/t/p/w200/' + movie.poster_path" alt="{{ movie.title }}" />
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+</div>

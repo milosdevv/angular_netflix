@@ -1,0 +1,16 @@
+<div class="section form_bg">
+    <div class="container">
+        <h3>Sign in</h3>
+        <form #loginForm="ngForm" (ngSubmit)="onLoginFormSubmitted(loginForm)">
+            <div>
+                <label>Username</label>
+                <input type="text" name="username" placeholder="Username" [(ngModel)]="username">
+            </div>
+            <div>
+                <label>Psasword</label>
+                <input type="password" name="password" placeholder="password" [(ngModel)]="password">
+            </div>
+            <button type="submit">Confirm</button>
+        </form>
+    </div>
+</div>
