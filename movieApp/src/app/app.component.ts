@@ -10,6 +10,9 @@ export class AppComponent{
   title = 'movieApp';
 
 constructor(private router:Router){}
+ngOnInit(): void {
+  this.router.navigate(['/dashboard'])
+}
 
 // ngOnInit(): void {
 //   this.router.navigate(['/login'])

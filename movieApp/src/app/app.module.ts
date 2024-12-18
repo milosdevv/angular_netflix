@@ -9,6 +9,9 @@ import { FormsModule } from '@angular/forms';
 import { MovieDashboardComponent } from './movie-dashboard/movie-dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { MovieDashboardModule } from './movie-dashboard/movie-dashboard.module';
+import { NavbarComponent } from './base/navbar/navbar.component';
+import { FooterComponent } from './base/footer/footer.component';
 
 const routes:Routes = [
   {path:'login', component:LoginFormComponent},
@@ -18,7 +21,9 @@ const routes:Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +31,8 @@ const routes:Routes = [
     FormsModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    MovieDashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
